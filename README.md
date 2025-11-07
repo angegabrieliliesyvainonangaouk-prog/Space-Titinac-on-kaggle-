@@ -1,179 +1,155 @@
 # Space-Titinac-machine-learning-project
 
-#English version
-##  Context
-
-This project is based on the **[Spaceship Titanic competition](https://www.kaggle.com/competitions/spaceship-titanic)** on Kaggle.  
-The goal is to predict whether a passenger of the Spaceship Titanic was **transported to another dimension** after an incident.
-
-This project demonstrates my skills in **data cleaning, feature engineering, modeling, and evaluation of Machine Learning models**, while applying a professional workflow to solve real-world problems.
+This project is based on the Spaceship Titanic competition
+on Kaggle. The goal is to predict whether a passenger of the Spaceship Titanic was transported to another dimension after an incident.
 
 
+Ce projet est basé sur la compétition Spaceship Titanic
+sur Kaggle. Le but est de prédire si un passager du vaisseau spatial Titanic a été transporté vers une autre dimension après un incident.
 
-##  Objectives
+This project demonstrates my skills in data cleaning, feature engineering, modeling, and evaluation of Machine Learning models, while following a professional workflow to solve real-world problems.
 
-- Explore and understand the dataset (EDA)  
-- Clean and prepare the data for modeling (handling missing values through intelligent imputation or with an "unknown" category, categorical encoding)  
-- Build, compare, and optimize multiple Machine Learning models (RandomForestClassifier, Gradient Boosting, LightGBM, XGBoost)  
-- Present clear and reproducible results  
-- Demonstrate the impact of feature selection and algorithm choice on model performance (using Mutual Information, Seaborn visualization, and permutation importance)  
+Ce projet permet de démontrer mes compétences en nettoyage de données, création de nouvelles features, modélisation et évaluation de modèles de Machine Learning, tout en appliquant une méthodologie professionnelle et surtout faire comprendre aux recruteurs qui passeront sur mon compte de quoi je suis capable.
 
+It also shows that I can perform well using a single model without any data leakage.
 
+Il montre également que je peux obtenir d’excellents résultats avec un seul modèle, sans aucune fuite de données.
 
-##  Technologies and Libraries
+Objectives / Objectifs
 
-- **Python 3**  
-- **Pandas / NumPy** – data manipulation  
-- **Scikit-learn** – modeling and pipelines  
-- **Matplotlib / Seaborn** – visualization  
-- **XGBoost / LightGBM / RandomForestClassifier**  
+Explore and understand the dataset (EDA)
 
+Clean and prepare data for modeling (handle missing values intelligently or with an “unknown” category, encode categorical variables properly)
 
+Build, compare, and optimize Machine Learning models (RandomForest, Gradient Boosting, LightGBM, XGBoost)
 
-##  Methodology
+Present clear and reproducible results
 
-1. **Exploratory Data Analysis (EDA)**  
-   - Count rows and columns of the dataset  
-   - Check categories and values for each column  
-   - Detect rare categories that could bias MI due to high variance  
-   - Identify string columns that could be split into new features  
+Demonstrate the impact of feature selection and algorithm choice on model performance (using Mutual Information, Seaborn visualization, and permutation importance)
 
-2. **Data Preprocessing**  
-   - Handle missing values (not necessary for MI, but required for encoding)  
-   - Encode categorical variables  
+ (VF)
+Explorer et comprendre les données (EDA)
 
-3. **Feature Selection**  
-   - Use Mutual Information to test dependency between features and the target  
-   - Use MI to test dependency between features themselves  
-   - Remove redundant features with high MI correlation  
-   - Create new features (feature engineering) and re-check MI with the target  
-   - Apply permutation importance on engineered features and baselines  
+Nettoyer et préparer les données pour la modélisation (gestion intelligente des valeurs manquantes ou création d’une catégorie “unknown”, encodage adapté des variables catégorielles)
 
-4. **Modeling**  
-   - Random Forest, Gradient Boosting, LightGBM  
-   - Manual hyperparameter optimization (to be improved in future work)  
+L'utilisation d'un seul modèle pour performer efficacement
 
-5. **Evaluation**  
-   - Metrics: Accuracy / F1-Score  
-   - Model comparison (limited locally due to computation time, most tests done directly on Kaggle)  
+Présenter des résultats clairs et reproductibles
 
+Montrer l’impact du choix des features et des algorithmes sur la performance du modèle (Mutual Information, visualisation Seaborn, permutation importance)
 
+Technologies and Libraries / Technologies et Librairies
 
-##  Results
+Python 3
 
-- Best model: **LightGBM**  
-- Best Kaggle score: **0.80687 accuracy**  
-- Most important categorical features:  
-  `"HomePlanet"`, `"CryoSleep"`, `"Destination"`, `"VIP"`, `"deckhome"`, `"side"`, `"group"`, `"deck"`
+Pandas / NumPy – data manipulation / manipulation de données
+
+Scikit-learn – modeling and pipelines / modélisation et pipelines
+
+Matplotlib / Seaborn – visualization 
+
+SHAP – explainability / interprétabilité
+
+LightGBM   machine learning models
 
 
-## Useful Links
+ Methodology / Méthodologie
+1. Exploratory Data Analysis (EDA) / Analyse exploratoire
 
-- Kaggle Notebook: [My Kaggle submission](https://www.kaggle.com/code/angegabrielilisyvain/suppresion-de-la-colonne-group?scriptVersionId=265028721)  
+Count dataset rows and columns / Comptage des lignes et colonnes
 
+Find the topic of each data / Comprendre le thème et la logique derrière les jeux de donnée
 
+Detect rare categories that may bias MI / Détection des catégories rares qui peuvent biaiser le MI
 
-## Conclusion
-
-This project highlights my ability to:  
-- Structure an end-to-end Machine Learning workflow  
-- Handle missing values and categorical variables effectively  
-- Build and evaluate performant ML models  
-- Communicate results in a clear and professional way  
-
-It represents a strong example of a **Machine Learning workflow suitable for a junior position in data science, data analysis, or machine learning**.  
+Identify string columns to create new features / Identification des colonnes à découper en nouvelles features
 
 
+2. Data Preprocessing / Prétraitement des données
+
+Handle missing values intelligently / Gestion intelligente des valeurs manquantes
+
+Encode categorical variables according to their type (nominal/ordinal)(to add in  this model) / Encodage des variables catégorielles selon leur nature (nominale ou ordinale)(à  ajouter dans ce modèle)
+
+3. Feature Selection / Sélection de Features
+
+Use Mutual Information (MI) to test dependency between features and target / Utilisation du MI de manière innovantes  pour tester la dépendance entre les features  et la cible
+
+Use MI to test dependency between features themselves / Utilisation du MI pour détecter les redondances entre colonnes
+
+Remove redundant features / Suppression des colonnes fortement dependantes 
+
+Create new engineered features based on logic and MI results / Création de nouvelles features à partir de ma logique et des résultats du MI 
+
+Evaluate importance via permutation and model-based ranking / Évaluation de l’importance via permutation et modèles de base
+
+4. Modeling / Modélisation
+
+I used LightGBM as my main model to focus on advanced feature engineering and faster iterations.
+J’ai utilisé LightGBM comme modèle principal afin de concentrer mon travail sur le feature engineering et de réduire le temps d’expérimentation.
+
+I applied Optuna for hyperparameter tuning, and used Stratified K-Fold cross-validation to ensure balanced class splits and better generalization.
+
+J’ai utilisé Optuna pour l’optimisation des hyperparamètres et Stratified K-Fold pour assurer une meilleure généralisation du modèle.
+
+5. Evaluation / Évaluation
+
+Metric: Accuracy
+
+Cross-validation: Stratified K-Fold
+
+ (VF)
+Metric : Accuracy
+
+Validation croisée : Stratified K-Fold
 
 
-#French version 
-##  Contexte
 
-Ce projet est basé sur la compétition **[Spaceship Titanic]([https://www.kaggle.com/competitions/spaceship-titanic]** sur Kaggle.  
-Le but est de prédire si un passager du vaisseau spatial Titanic a été **transporté vers une autre dimension** suite à un incident.
+Results / Résultats
 
-Ce projet permet de démontrer mes compétences en **data cleaning, feature engineering, modélisation et évaluation de modèles de Machine Learning**, tout en appliquant un workflow professionnel pour la résolution de problèmes réels.
+used model: LightGBM
 
-##  Objectifs
+Best Kaggle score: 0.80734 accuracy
 
-- Comprendre et explorer les données (EDA)  
+Most important features:  "CryoSleep","deckhome" ,TotalSpend etc..
 
-- Nettoyer et préparer les données pour la modélisation (gestion des valeurs manquantes par imputation intelligente ou par une variable unknown, encodage des variables catégorielles,)  
+Modèle utilisé : LightGBM
 
-- Construire, comparer et optimiser plusieurs modèles de Machine Learning(RandomForestClassif,les gradiants boostings)  
+Meilleur score Kaggle : 0,80734 accuracy
 
-- Présenter des résultats clairs et reproductibles  
+Features les plus importantes : "CryoSleep","deckhome" ,TotalSpend etc..
 
-- Démontrer l’impact des choix de features et d’algorithmes sur la performance du modèle (Par une utilisation du MI , de la visualisation seaborn , par des permutations par importance)
+ CodeSpace
 
-##  Technologies et Librairies
+You can explore my notebook to see how I explain each choice and step of my workflow.
+Vous pouvez consulter mon notebook pour voir comment j’explique chacun de mes choix et ma manière de travailler.Il se trouve dans le fichier space_titanic_CodeSpace
 
-- **Python 3**  
-- **Pandas / NumPy** – manipulation de données  
-- **Scikit-learn** – modélisation et pipelines  
-- **Matplotlib / Seaborn** – visualisations  
-- **XGBoost / LightGBM**/**RandomForestclassif**
+🧩 Conclusion / Conclusion
 
-- ##  Méthodologie
+This project highlights my ability to:
 
-1. **Analyse Exploratoire (EDA)**
+Structure an end-to-end Machine Learning workflow
 
-   -Comptages du nombres de lignes et de colonnes du dataframe 
+Handle missing values and categorical variables effectively
 
-   -Comptage des catégories et valeurs de chaques colonnes
+Build and evaluate performant ML models
 
-   -Comptage des catégories et valeurs  qui se répètent une seule fois pour           savoir quelle colonnes pourront avoir un MI biasé à cause d'une variance  de      valeurs ou de catégories trop elévé
+Communicate results clearly and professionally
 
-   -Recherhce des colonnes de types strings pour pouvoir potentiellement les          séparées
-   
-   
-  
+Ce projet met en avant ma capacité à :
 
-3. **Prétraitement des données**  
-  -  Gestion des valeurs manquantes(pas nécessaire pour faire  le MI, mais              nécessaire   pour l'encodage )
-  - Encodage des variables catégorielles  
-   
-3. **Sélection de Features**  
-   - Mutual information
-   
-   -Utilisation du MI pour tester la dépendances des colonnes par rapport au           target
+Structurer un projet Machine Learning de bout en bout
 
-   -Utilisation du MI pour tester la dépendandce des colonnes entre elles
+Gérer les données manquantes et catégorielles avec logique et rigueur
 
-   -Piochage des colonnes avec un fort MI entre elles afin d'éviter les                redondances pour mon modèle
+Construire et évaluer des modèles performants
 
-   -Créations de fetures engineering à partir de ces colonnes,vérifications par        mon MI à nouveau de la dépendance par rapport au target de celles-ci
+Communiquer mes résultats de manière claire et professionnelle
+
+I’m aware that I still have a lot to learn, but I improve every day and constantly do research to push my limits. If this project doesn’t yet meet your expectations for a paid internship, I invite you to look at my House Price Advanced project (ranked 61/5394 without data leakage), where I implemented specific encodings for each type of feature, target encoding for high-cardinality variables, redundancy management, and skewness correction.If after that ,you want see more ,like I love challenges and competition feel free to test me.
+
+(VF)
+Je suis conscient qu’il me reste encore  des choses à apprendre , c'est pour cette raison que je suis ouvert à toutes les propositions professionnelles (Stage remunéré ,internship, job junior en ML, data scientit, research IA... ).Tant que vous permettez de continuer mes recherches   de manière approfondi et aussi me nourrir  je suis à l'écoute.  Si ce projet n’atteint pas encore vos attentes ,  je vous invite à regarder mon projet House Price Advanced (61ᵉ/5394 sans fuite de données), où j’ai mis en place des encodages spécifiques, un target encoding pour les variables à forte cardinalité, une gestion des redondances et une correction des skewness.
+Et si après ça vous n'êtes pas convaincu de mon talent ,comme J’aime les défis et la compétition n’hésitez pas à me challenger.
 
 
-   -Permutaion par importance du feature engineering, et des features qui le           compose pour savoir quel assemblage apporte le mieux d'information à mon           modèle 
-
-   - Importance des features via modèles baselines
-  
-  
-5. **Modélisation**  
-   - Random Forest, Gradient Boosting  
-   - Optimisation des hyperparamètres manuel(mais c'était une perte de temps ,je       vais améliorer ça)  
-
-6. **Évaluation**  
-   - Accuracy / F1-Score  
-   - Comparaison des modèles sur validation et test (impossible sur mon ordinateur     , temps de résultat trop long donc je faisais directement sur kaggle )
-  
-     ## Résultats
-
-- Meilleur modèle : **Lightgbm**  
-- Meilleur score Kaggle : **0,80687% accuracy**  
-- Visualisation des features  object les plus importantes :
-  "HomePlanet","CryoSleep","Destination","VIP","deckhome","side","group","deck" 
-
-   ##  Liens utiles
-  > Pour plus de détails sur les notebooks et les soumissions, voir mon compte       kaggle **[(https://www.kaggle.com/code/angegabrielilisyvain/suppresion-de-la-colonne-group?scriptVersionId=265028721))**]
-
-#  Conclusion
-
-Ce projet montre ma capacité à :  
-- Structurer un projet de A à Z  
-- Gérer les données manquantes et catégorielles  
-- Construire et évaluer des modèles ML performants  
-- Communiquer les résultats de manière claire et professionnelle  
-
-Il constitue un excellent exemple de **workflow Machine Learning pour un poste junior en data science/data analyst / machine learning**.
