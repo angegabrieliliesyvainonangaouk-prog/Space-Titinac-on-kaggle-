@@ -3,11 +3,11 @@
 This project is based on the Spaceship Titanic competition
 on Kaggle. The goal is to predict whether a passenger of the Spaceship Titanic was transported to another dimension after an incident.
 
-
 Ce projet est basé sur la compétition Spaceship Titanic
 sur Kaggle. Le but est de prédire si un passager du vaisseau spatial Titanic a été transporté vers une autre dimension après un incident.
 
 This project demonstrates my skills in data cleaning, feature engineering, modeling, and evaluation of Machine Learning models, while following a professional workflow to solve real-world problems.
+
 
 Ce projet permet de démontrer mes compétences en nettoyage de données, création de nouvelles features, modélisation et évaluation de modèles de Machine Learning, tout en appliquant une méthodologie professionnelle et surtout faire comprendre aux recruteurs qui passeront sur mon compte de quoi je suis capable.
 
@@ -121,7 +121,10 @@ Features les plus importantes : "CryoSleep","deckhome" ,TotalSpend etc..
 
  CodeSpace
 
-You can explore my notebook to see how I explain each choice and step of my workflow.
+You can explore my notebook to see how I explain each choice and step of my workflow.You can see this notebook in the field Space_titanic_codespace.
+Link Kaggle https:**//www.kaggle.com/competitions/spaceship-titanic/leaderboard
+
+
 Vous pouvez consulter mon notebook pour voir comment j’explique chacun de mes choix et ma manière de travailler.Il se trouve dans le fichier space_titanic_CodeSpace
 
 🧩 Conclusion / Conclusion
